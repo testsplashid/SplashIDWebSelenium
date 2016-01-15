@@ -31,11 +31,6 @@ public class UserBase{
 	@FindBy (xpath ="//span[contains(text(),'Edit Types')]")
 	private WebElement edtTypbtn;
 	
-	//Sign-out
-	@FindBy (xpath ="//span[contains(text(),'Sign Out')]")
-	private WebElement sgnOutbtn;
-	
-	
 	//Duplicate-Records button
 	@FindBy (xpath="//button[@class='defaultrecbtns_dup btn btn-simple-blue btn-sm editable-submit']")
 	private WebElement dupicateRecord;
@@ -82,8 +77,5 @@ public class UserBase{
 		edtTypbtn.click();
 	}
 	
-	public void signOut()
-	{
-		sgnOutbtn.click();
-	}
+	
 }
