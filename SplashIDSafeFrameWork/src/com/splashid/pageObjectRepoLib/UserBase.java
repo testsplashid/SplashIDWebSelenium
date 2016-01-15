@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.splashid.genericLib.Driver;
 
-public class UserBasePage {
+public class UserBase{
 	
 	//SplashID Safe Menu- Records Homepage	
 	@FindBy (xpath="//span[contains(text(),'SplashID Safe')]")

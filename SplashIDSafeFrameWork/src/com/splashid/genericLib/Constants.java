@@ -4,7 +4,7 @@ public interface Constants {
 	String browser = "Firefox";
 	String url = "https://beta.splashid.com/login";
 	String UserName = "testsplashid007@gmail.com";
-	String Password = "1234";
+	String Password = "12345";
 	
 
 }
