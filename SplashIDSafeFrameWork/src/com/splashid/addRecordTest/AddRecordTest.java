@@ -1,8 +1,8 @@
 package com.splashid.addRecordTest;
 
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,7 +23,7 @@ public class AddRecordTest {
 	AddRecCatTypBtn addRecCatTypPage ;
 	Common comPage;
 	
-	@BeforeClass
+	@org.testng.annotations.BeforeClass
 	public void configureBeforeClass(){
 		driver = Driver.getDriver();
 		loginPage = PageFactory.initElements(driver, Login.class);
@@ -35,9 +35,9 @@ public class AddRecordTest {
 	
 	@BeforeMethod
 	public void configBeforeMethod(){
-		String userNAme = Constants.UserName;
-		String passWord = Constants.Password;
-		loginPage.loginIntoApp(userNAme, passWord);
+		String UserName = Constants.UserName;
+		String Password = Constants.Password;
+		loginPage.loginIntoApp(UserName,Password);
 	}
 	
 	@Test
@@ -47,10 +47,17 @@ public class AddRecordTest {
 		//Step 2: Fill in the details
 		addRecordPage.addData("TestDescription","T2", "T3", "T4","T5","T6","T7","T8", "T9");
 		addRecordPage.saveRecord();
+		
+	}
+	@AfterMethod
+	public void configAfterMethod(){
 		comPage.signOut();
 	}
 	
-	
+	@org.testng.annotations.AfterClass
+	public void configAfterClass(){
+		driver.quit();
+	}
 	
 	
 

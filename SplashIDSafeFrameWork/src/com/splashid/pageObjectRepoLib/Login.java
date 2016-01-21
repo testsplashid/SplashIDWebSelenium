@@ -21,14 +21,14 @@ public class Login {
 	@FindBy (id="btnPersonal")
 	private WebElement sbmtBtn;
 	
-	public void loginIntoApp(String Username, String Password)
+	public void loginIntoApp(String UserName, String Password)
 	{
 		Driver.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Driver.driver.get(Constants.url);
-		usrNameEdt.sendKeys(Username);
+		usrNameEdt.sendKeys(UserName);
 		nxtBtn.click();
 		pwdEdt.sendKeys(Password);
 		sbmtBtn.click();
 	}
-
+	
 }
