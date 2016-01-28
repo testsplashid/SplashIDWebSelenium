@@ -23,6 +23,7 @@ public class Login {
 	
 	public void loginIntoApp(String UserName, String Password)
 	{
+		Driver.driver.manage().window().maximize();
 		Driver.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Driver.driver.get(Constants.url);
 		usrNameEdt.sendKeys(UserName);

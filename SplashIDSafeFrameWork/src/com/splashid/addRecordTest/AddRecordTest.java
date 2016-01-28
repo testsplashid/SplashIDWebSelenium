@@ -1,5 +1,6 @@
 package com.splashid.addRecordTest;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
@@ -41,13 +42,15 @@ public class AddRecordTest {
 	}
 	
 	@Test
-	public void addNewRecordTest(){
+	public void addNewRecordTest() throws InterruptedException{
 		//Step 1: Navigate to Add record page
 		addRecCatTypPage.addRecord();
 		//Step 2: Fill in the details
 		addRecordPage.addData("TestDescription","T2", "T3", "T4","T5","T6","T7","T8", "T9");
+		//JavascriptExecutor jse = (JavascriptExecutor)Driver.driver;
+		//jse.executeScript("scroll(0, 250)");
 		addRecordPage.saveRecord();
-		
+		Thread.sleep(8000);
 	}
 	@AfterMethod
 	public void configAfterMethod(){
