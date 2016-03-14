@@ -14,6 +14,7 @@ import com.splashid.pageObjectRepoLib.AddRecord;
 import com.splashid.pageObjectRepoLib.Common;
 import com.splashid.pageObjectRepoLib.Login;
 import com.splashid.pageObjectRepoLib.UserBase;
+import com.splashid.verificationLib.AddRecordVerification;
 
 public class AddRecordTest {
 	
@@ -23,6 +24,7 @@ public class AddRecordTest {
 	UserBase userBasePage;
 	AddRecCatTypBtn addRecCatTypPage ;
 	Common comPage;
+	AddRecordVerification recordVerification;
 	
 	@org.testng.annotations.BeforeClass
 	public void configureBeforeClass(){
@@ -56,7 +58,7 @@ public class AddRecordTest {
 	@Test
 	public void verifyNewRecordAddedTest()
 	{
-		
+		recordVerification.searchRecord("TestDescription", "TestDescription");
 	}
 	@AfterMethod
 	public void configAfterMethod(){
