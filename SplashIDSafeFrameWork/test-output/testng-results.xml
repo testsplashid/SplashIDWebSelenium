@@ -1,101 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60598" started-at="2016-01-21T18:19:52Z" finished-at="2016-01-21T18:20:52Z">
+  <suite name="Default suite" duration-ms="70737" started-at="2016-03-14T08:32:05Z" finished-at="2016-03-14T08:33:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="60598" started-at="2016-01-21T18:19:52Z" finished-at="2016-01-21T18:20:52Z">
+    <test name="Default test" duration-ms="70737" started-at="2016-03-14T08:32:05Z" finished-at="2016-03-14T08:33:16Z">
       <class name="com.splashid.addRecordTest.AddRecordTest">
-        <test-method status="PASS" signature="configureBeforeClass()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configureBeforeClass" is-config="true" duration-ms="11432" started-at="2016-01-21T23:49:52Z" finished-at="2016-01-21T23:50:03Z">
+        <test-method status="PASS" signature="configureBeforeClass()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configureBeforeClass" is-config="true" duration-ms="7839" started-at="2016-03-14T14:02:05Z" finished-at="2016-03-14T14:02:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureBeforeClass -->
-        <test-method status="PASS" signature="configBeforeMethod()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configBeforeMethod" is-config="true" duration-ms="11201" started-at="2016-01-21T23:50:03Z" finished-at="2016-01-21T23:50:14Z">
+        <test-method status="PASS" signature="configBeforeMethod()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configBeforeMethod" is-config="true" duration-ms="8848" started-at="2016-03-14T14:02:13Z" finished-at="2016-03-14T14:02:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBeforeMethod -->
-        <test-method status="FAIL" signature="addNewRecordTest()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="addNewRecordTest" duration-ms="35246" started-at="2016-01-21T23:50:14Z" finished-at="2016-01-21T23:50:49Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: {"method":"id","selector":"btnaddnewrcrds244ac"}
-Command duration or timeout: 726 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
-System info: host: 'DESKTOP-2HU8DT4', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_71'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3855bd05-df5d-4fc7-8547-9b8c9be71945
-*** Element info: {Using=id, value=btnaddnewrcrds244ac}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"btnaddnewrcrds244ac"}
-Command duration or timeout: 726 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
-System info: host: 'DESKTOP-2HU8DT4', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_71'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.4, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3855bd05-df5d-4fc7-8547-9b8c9be71945
-*** Element info: {Using=id, value=btnaddnewrcrds244ac}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:403)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
-	at com.splashid.pageObjectRepoLib.AddRecCatTypBtn.addRecord(AddRecCatTypBtn.java:17)
-	at com.splashid.addRecordTest.AddRecordTest.addNewRecordTest(AddRecordTest.java:46)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:773)
-	at org.testng.TestRunner.run(TestRunner.java:623)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
-	at org.testng.TestNG.run(TestNG.java:1018)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"btnaddnewrcrds244ac"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
-System info: host: 'DESKTOP-2HU8DT4', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_71'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Harsh/AppData/Local/Temp/anonymous741401499900556558webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
-	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/Harsh/AppData/Local/Temp/anonymous741401499900556558webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10668)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Harsh/AppData/Local/Temp/anonymous741401499900556558webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Harsh/AppData/Local/Temp/anonymous741401499900556558webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12539)
-	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/Harsh/AppData/Local/Temp/anonymous741401499900556558webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12481)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="addNewRecordTest()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="addNewRecordTest" duration-ms="51808" started-at="2016-03-14T14:02:22Z" finished-at="2016-03-14T14:03:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewRecordTest -->
-        <test-method status="PASS" signature="configAfterMethod()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configAfterMethod" is-config="true" duration-ms="273" started-at="2016-01-21T23:50:49Z" finished-at="2016-01-21T23:50:50Z">
+        <test-method status="PASS" signature="configAfterMethod()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configAfterMethod" is-config="true" duration-ms="247" started-at="2016-03-14T14:03:13Z" finished-at="2016-03-14T14:03:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAfterMethod -->
-        <test-method status="PASS" signature="configAfterClass()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configAfterClass" is-config="true" duration-ms="2403" started-at="2016-01-21T23:50:50Z" finished-at="2016-01-21T23:50:52Z">
+        <test-method status="PASS" signature="configAfterClass()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configAfterClass" is-config="true" duration-ms="1973" started-at="2016-03-14T14:03:14Z" finished-at="2016-03-14T14:03:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAfterClass -->

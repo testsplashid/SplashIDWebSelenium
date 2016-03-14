@@ -46,11 +46,17 @@ public class AddRecordTest {
 		//Step 1: Navigate to Add record page
 		addRecCatTypPage.addRecord();
 		//Step 2: Fill in the details
-		addRecordPage.addData("TestDescription","T2", "T3", "T4","T5","T6","T7","T8", "T9");
+		addRecordPage.addData("Business","Combinations","TestDescription","T2", "T3", "T4","T5","T6","T7","T8", "T9");
 		//JavascriptExecutor jse = (JavascriptExecutor)Driver.driver;
 		//jse.executeScript("scroll(0, 250)");
 		addRecordPage.saveRecord();
 		Thread.sleep(8000);
+	}
+	
+	@Test
+	public void verifyNewRecordAddedTest()
+	{
+		
 	}
 	@AfterMethod
 	public void configAfterMethod(){
