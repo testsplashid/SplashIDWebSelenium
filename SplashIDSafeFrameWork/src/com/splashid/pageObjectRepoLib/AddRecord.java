@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import com.splashid.genericLib.Driver;
 import com.thoughtworks.selenium.Selenium;
@@ -53,6 +54,9 @@ public class AddRecord {
 	@FindBy(id="srrncrds902tfc_addanother")
 	private WebElement saveRecordAddAnotherBtn;
 	
+	@FindBy(id="srchrecords")
+	private WebElement SearchRecords;
+	
 	public void addData(String Cat,String Typ,String F1, String F2, String F3,String F4,String F5,String F6,String F7,String F8,String F9) throws InterruptedException{
 		Driver.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(8000);
@@ -93,4 +97,6 @@ public class AddRecord {
 		saveRecordAddAnotherBtn.click();
 	}
 	
+	
+
 }

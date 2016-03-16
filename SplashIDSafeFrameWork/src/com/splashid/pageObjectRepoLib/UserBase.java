@@ -1,7 +1,11 @@
 package com.splashid.pageObjectRepoLib;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import com.splashid.genericLib.Driver;
 
@@ -38,6 +42,33 @@ public class UserBase{
 	//Delete Record
 	@FindBy (xpath="//button[@class='btn btn-simple-red btn-sm editable-cancel']")
 	private WebElement deleteRecord;
+	
+	@FindBy(id= "editdescriptiondc")
+	private WebElement vfieldOne;
+	
+	@FindBy(id="editfieldValue2dc")
+	private WebElement vfieldTwo;
+
+	@FindBy(id="editfieldValue3dc")
+	private WebElement vfieldThree;
+	
+	@FindBy(id="editfieldValue4dc")
+	private WebElement vfieldFour;
+	
+	@FindBy(id="editfieldValue5dc")
+	private WebElement vfieldFive;
+	
+	@FindBy(id="editfieldValue6dc")
+	private WebElement vfieldSix;
+	
+	@FindBy(id="editfieldValue7dc")
+	private WebElement vfieldSeven;
+	
+	@FindBy(id="editfieldValue8dc")
+	private WebElement vfieldEight;
+	
+	@FindBy(id="editfieldValue9dc")
+	private WebElement vfieldNine;
 	
 	public void duplicatRecords()
 	{
@@ -77,5 +108,20 @@ public class UserBase{
 		edtTypbtn.click();
 	}
 	
+	
+	public void AddRecordVerification(String S1, String S2, String S3,String S4,String S5,String S6,String S7,String S8,String S9) {
+		Driver.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Driver.driver.findElement(By.id("srchrecords")).sendKeys(S1);
+		Driver.driver.findElement(By.xpath("//table/tbody/tr/td/b[contains(text(),'TestDescription')]")).click();
+		Assert.assertEquals(vfieldOne.getText(), S1);
+		Assert.assertEquals(vfieldTwo.getText(), S2);
+		Assert.assertEquals(vfieldThree.getText(), S3);
+		Assert.assertEquals(vfieldFour.getText(), S4);
+		Assert.assertEquals(vfieldFive.getText(), S5);
+		Assert.assertEquals(vfieldSix.getText(), S6);
+		Assert.assertEquals(vfieldSeven.getText(), S7);
+		Assert.assertEquals(vfieldEight.getText(), S8);
+		Assert.assertEquals(vfieldNine.getText(), S9);
+}
 	
 }
