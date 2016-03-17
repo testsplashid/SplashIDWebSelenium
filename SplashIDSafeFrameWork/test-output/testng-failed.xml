@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.splashid.addRecordTest.AddRecordTest">
+      <class name="com.splashid.addRecordTest.EditRecordTest">
         <methods>
           <include name="configAfterMethod"/>
+          <include name="editRecordTest"/>
           <include name="configureBeforeClass"/>
           <include name="configBeforeMethod"/>
           <include name="configAfterClass"/>
-          <include name="addNewRecordTest"/>
         </methods>
-      </class> <!-- com.splashid.addRecordTest.AddRecordTest -->
+      </class> <!-- com.splashid.addRecordTest.EditRecordTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

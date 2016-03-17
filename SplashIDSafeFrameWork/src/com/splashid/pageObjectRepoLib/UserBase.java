@@ -135,5 +135,31 @@ public class UserBase{
 		Assert.assertEquals(vfieldEight.getText(), S8);
 		Assert.assertEquals(vfieldNine.getText(), S9);
 }
+	public void editRecord(String edtDescription)
+	{
+		Driver.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Driver.driver.navigate().refresh();
+		Driver.driver.findElement(By.id("srchrecords")).sendKeys("TestDes");
+		Driver.driver.findElement(By.xpath("//table/tbody/tr/td/b[contains(text(),'TestDescription')]")).click();
+		Driver.driver.findElement(By.id("editdescriptiondc")).click();
+		Driver.driver.findElement(By.id("editdescriptiondc")).clear();
+		Driver.driver.findElement(By.id("editdescriptiondc")).sendKeys(edtDescription);
+		//Driver.driver.findElement(By.id("editdescriptiondc")).sendKeys(Keys.TAB);
+		//Driver.driver.findElement(By.className("svsrnrcrdsc btn btn-primary btn-sm editable-submit")).click();
+		//Actions saveBtnRcd = new Actions(Driver.driver);
+		//saveBtnRcd.sendKeys(Keys.chord(Keys.TAB,Keys.SPACE)).perform();
+		
+		Actions clickSave = new Actions(Driver.driver);
+		WebElement saveB = Driver.driver.findElement(By.className("svsrnrcrdsc btn btn-primary btn-sm editable-submit"));
+		clickSave.moveToElement(saveB).click().perform();
+	}
 	
+	public void editRecorVerification(String editedString)
+	{
+		Driver.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Driver.driver.navigate().refresh();
+		Driver.driver.findElement(By.id("srchrecords")).sendKeys("TestDes");
+		Driver.driver.findElement(By.xpath("//table/tbody/tr/td/b[contains(text(),'TestDescription')]")).click();
+		Assert.assertEquals(vfieldOne.getText(), editedString);
+	}
 }

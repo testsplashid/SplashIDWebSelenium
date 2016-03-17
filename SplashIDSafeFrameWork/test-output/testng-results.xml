@@ -1,33 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="111712" started-at="2016-03-17T15:07:44Z" finished-at="2016-03-17T15:09:36Z">
+  <suite name="Default suite" duration-ms="96276" started-at="2016-03-17T16:58:36Z" finished-at="2016-03-17T17:00:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="111712" started-at="2016-03-17T15:07:44Z" finished-at="2016-03-17T15:09:36Z">
-      <class name="com.splashid.addRecordTest.AddRecordTest">
-        <test-method status="PASS" signature="configureBeforeClass()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configureBeforeClass" is-config="true" duration-ms="12413" started-at="2016-03-17T20:37:44Z" finished-at="2016-03-17T20:37:56Z">
+    <test name="Default test" duration-ms="96276" started-at="2016-03-17T16:58:36Z" finished-at="2016-03-17T17:00:13Z">
+      <class name="com.splashid.addRecordTest.EditRecordTest">
+        <test-method status="PASS" signature="configureBeforeClass()[pri:0, instance:com.splashid.addRecordTest.EditRecordTest@5fe5c6f]" name="configureBeforeClass" is-config="true" duration-ms="8268" started-at="2016-03-17T22:28:36Z" finished-at="2016-03-17T22:28:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureBeforeClass -->
-        <test-method status="PASS" signature="configBeforeMethod()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configBeforeMethod" is-config="true" duration-ms="10075" started-at="2016-03-17T20:37:56Z" finished-at="2016-03-17T20:38:06Z">
+        <test-method status="PASS" signature="configBeforeMethod()[pri:0, instance:com.splashid.addRecordTest.EditRecordTest@5fe5c6f]" name="configBeforeMethod" is-config="true" duration-ms="10607" started-at="2016-03-17T22:28:45Z" finished-at="2016-03-17T22:28:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBeforeMethod -->
-        <test-method status="PASS" signature="addNewRecordTest()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="addNewRecordTest" duration-ms="86745" started-at="2016-03-17T20:38:06Z" finished-at="2016-03-17T20:39:33Z">
+        <test-method status="FAIL" signature="editRecordTest()[pri:0, instance:com.splashid.addRecordTest.EditRecordTest@5fe5c6f]" name="editRecordTest" duration-ms="75286" started-at="2016-03-17T22:28:55Z" finished-at="2016-03-17T22:30:11Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 20.07 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'DESKTOP-2HU8DT4', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_71'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 01597680-36d0-427e-998e-f2d69306b199]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 20.07 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'DESKTOP-2HU8DT4', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_71'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 01597680-36d0-427e-998e-f2d69306b199
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:139)
+	at com.splashid.pageObjectRepoLib.UserBase.editRecord(UserBase.java:145)
+	at com.splashid.addRecordTest.EditRecordTest.editRecordTest(EditRecordTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'DESKTOP-2HU8DT4', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_71'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/Harsh/AppData/Local/Temp/anonymous1635474565248643415webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Harsh/AppData/Local/Temp/anonymous1635474565248643415webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Harsh/AppData/Local/Temp/anonymous1635474565248643415webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Harsh/AppData/Local/Temp/anonymous1635474565248643415webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewRecordTest -->
-        <test-method status="PASS" signature="configAfterMethod()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configAfterMethod" is-config="true" duration-ms="328" started-at="2016-03-17T20:39:33Z" finished-at="2016-03-17T20:39:33Z">
+        </test-method> <!-- editRecordTest -->
+        <test-method status="PASS" signature="configAfterMethod()[pri:0, instance:com.splashid.addRecordTest.EditRecordTest@5fe5c6f]" name="configAfterMethod" is-config="true" duration-ms="369" started-at="2016-03-17T22:30:11Z" finished-at="2016-03-17T22:30:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAfterMethod -->
-        <test-method status="PASS" signature="configAfterClass()[pri:0, instance:com.splashid.addRecordTest.AddRecordTest@5fe5c6f]" name="configAfterClass" is-config="true" duration-ms="2110" started-at="2016-03-17T20:39:33Z" finished-at="2016-03-17T20:39:36Z">
+        <test-method status="PASS" signature="configAfterClass()[pri:0, instance:com.splashid.addRecordTest.EditRecordTest@5fe5c6f]" name="configAfterClass" is-config="true" duration-ms="1713" started-at="2016-03-17T22:30:11Z" finished-at="2016-03-17T22:30:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAfterClass -->
-      </class> <!-- com.splashid.addRecordTest.AddRecordTest -->
+      </class> <!-- com.splashid.addRecordTest.EditRecordTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
