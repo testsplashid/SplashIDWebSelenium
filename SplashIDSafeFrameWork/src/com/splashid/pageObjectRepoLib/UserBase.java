@@ -3,7 +3,9 @@ package com.splashid.pageObjectRepoLib;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
@@ -123,7 +125,13 @@ public class UserBase{
 		Assert.assertEquals(vfieldFive.getText(), S5);
 		Assert.assertEquals(vfieldSix.getText(), S6);
 		Assert.assertEquals(vfieldSeven.getText(), S7);
-		
+		Actions mouseHoverDes = new Actions(Driver.driver);
+		WebElement we = Driver.driver.findElement(By.id("editdescriptiondc"));
+		mouseHoverDes.moveToElement(we).build().perform();
+		//Driver.driver.findElement(By.xpath("//*[@id='crnsrrv2ce399g']/div[16]/div")).click();
+		Actions scrollDownRecordDetails = new Actions(Driver.driver);
+		//scrollDownRecordDetails.moveToElement();
+		scrollDownRecordDetails.sendKeys(Keys.chord(Keys.DOWN,Keys.ARROW_DOWN)).perform();
 		Assert.assertEquals(vfieldEight.getText(), S8);
 		Assert.assertEquals(vfieldNine.getText(), S9);
 }
