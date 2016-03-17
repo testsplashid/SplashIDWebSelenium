@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
 
 import com.splashid.genericLib.Driver;
@@ -43,7 +44,7 @@ public class UserBase{
 	@FindBy (xpath="//button[@class='btn btn-simple-red btn-sm editable-cancel']")
 	private WebElement deleteRecord;
 	
-	@FindBy(id= "editdescriptiondc")
+	@FindBy(xpath= "//*[@id='editdescriptiondc']")
 	private WebElement vfieldOne;
 	
 	@FindBy(id="editfieldValue2dc")
@@ -109,10 +110,12 @@ public class UserBase{
 	}
 	
 	
-	public void AddRecordVerification(String S1, String S2, String S3,String S4,String S5,String S6,String S7,String S8,String S9) {
+	public void AddRecordVerification(String S1, String S2, String S3,String S4,String S5,String S6,String S7,String S8,String S9) throws InterruptedException {
 		Driver.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Driver.driver.navigate().refresh();
 		Driver.driver.findElement(By.id("srchrecords")).sendKeys(S1);
 		Driver.driver.findElement(By.xpath("//table/tbody/tr/td/b[contains(text(),'TestDescription')]")).click();
+		Thread.sleep(8000);
 		Assert.assertEquals(vfieldOne.getText(), S1);
 		Assert.assertEquals(vfieldTwo.getText(), S2);
 		Assert.assertEquals(vfieldThree.getText(), S3);
@@ -120,6 +123,7 @@ public class UserBase{
 		Assert.assertEquals(vfieldFive.getText(), S5);
 		Assert.assertEquals(vfieldSix.getText(), S6);
 		Assert.assertEquals(vfieldSeven.getText(), S7);
+		
 		Assert.assertEquals(vfieldEight.getText(), S8);
 		Assert.assertEquals(vfieldNine.getText(), S9);
 }
