@@ -135,31 +135,35 @@ public class UserBase{
 		Assert.assertEquals(vfieldEight.getText(), S8);
 		Assert.assertEquals(vfieldNine.getText(), S9);
 }
-	public void editRecord(String edtDescription)
+	public void editRecord(String edtDescription) throws InterruptedException
 	{
 		Driver.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		Driver.driver.navigate().refresh();
+		//Driver.driver.navigate().refresh();
 		Driver.driver.findElement(By.id("srchrecords")).sendKeys("TestDes");
 		Driver.driver.findElement(By.xpath("//table/tbody/tr/td/b[contains(text(),'TestDescription')]")).click();
 		Driver.driver.findElement(By.id("editdescriptiondc")).click();
-		Driver.driver.findElement(By.id("editdescriptiondc")).clear();
-		Driver.driver.findElement(By.id("editdescriptiondc")).sendKeys(edtDescription);
+		Thread.sleep(4000);
+		Driver.driver.findElement(By.id("editdescription")).clear();
+		Driver.driver.findElement(By.id("editdescription")).sendKeys(edtDescription);
+		Driver.driver.findElement(By.xpath("//button[@class='svsrnrcrdsc btn btn-primary btn-sm editable-submit']")).click();
+		Thread.sleep(4000);
 		//Driver.driver.findElement(By.id("editdescriptiondc")).sendKeys(Keys.TAB);
 		//Driver.driver.findElement(By.className("svsrnrcrdsc btn btn-primary btn-sm editable-submit")).click();
 		//Actions saveBtnRcd = new Actions(Driver.driver);
 		//saveBtnRcd.sendKeys(Keys.chord(Keys.TAB,Keys.SPACE)).perform();
 		
-		Actions clickSave = new Actions(Driver.driver);
-		WebElement saveB = Driver.driver.findElement(By.className("svsrnrcrdsc btn btn-primary btn-sm editable-submit"));
-		clickSave.moveToElement(saveB).click().perform();
+		//Actions clickSave = new Actions(Driver.driver);
+		//WebElement saveB = Driver.driver.findElement(By.className("svsrnrcrdsc btn btn-primary btn-sm editable-submit"));
+		//clickSave.moveToElement(saveB).click().perform();
 	}
 	
-	public void editRecorVerification(String editedString)
+	public void editRecorVerification(String editedString) throws InterruptedException
 	{
 		Driver.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Driver.driver.navigate().refresh();
 		Driver.driver.findElement(By.id("srchrecords")).sendKeys("TestDes");
 		Driver.driver.findElement(By.xpath("//table/tbody/tr/td/b[contains(text(),'TestDescription')]")).click();
+		Thread.sleep(4000);
 		Assert.assertEquals(vfieldOne.getText(), editedString);
 	}
 }
