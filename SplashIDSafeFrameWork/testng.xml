@@ -5,6 +5,7 @@
     <classes>
       <class name="com.splashid.addRecordTest.AddRecordTest"/>
       <class name="com.splashid.addRecordTest.EditRecordTest"/>
+      <class name="com.splashid.addRecordTest.DeleteRecordTest"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

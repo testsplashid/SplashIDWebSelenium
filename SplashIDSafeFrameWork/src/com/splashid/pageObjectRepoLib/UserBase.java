@@ -147,14 +147,7 @@ public class UserBase{
 		Driver.driver.findElement(By.id("editdescription")).sendKeys(edtDescription);
 		Driver.driver.findElement(By.xpath("//button[@class='svsrnrcrdsc btn btn-primary btn-sm editable-submit']")).click();
 		Thread.sleep(4000);
-		//Driver.driver.findElement(By.id("editdescriptiondc")).sendKeys(Keys.TAB);
-		//Driver.driver.findElement(By.className("svsrnrcrdsc btn btn-primary btn-sm editable-submit")).click();
-		//Actions saveBtnRcd = new Actions(Driver.driver);
-		//saveBtnRcd.sendKeys(Keys.chord(Keys.TAB,Keys.SPACE)).perform();
 		
-		//Actions clickSave = new Actions(Driver.driver);
-		//WebElement saveB = Driver.driver.findElement(By.className("svsrnrcrdsc btn btn-primary btn-sm editable-submit"));
-		//clickSave.moveToElement(saveB).click().perform();
 	}
 	
 	public void editRecorVerification(String editedString) throws InterruptedException
@@ -166,4 +159,15 @@ public class UserBase{
 		Thread.sleep(4000);
 		Assert.assertEquals(vfieldOne.getText(), editedString);
 	}
+	
+	public void deleteRecord(String deleteRecord) throws InterruptedException
+	{
+		Driver.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Driver.driver.findElement(By.id("srchrecords")).sendKeys("TestDes");
+		Driver.driver.findElement(By.xpath("//table/tbody/tr/td/b[contains(text(),'TestDescriptionEdit')]")).click();
+		Driver.driver.findElement(By.xpath("//button[@class='btn btn-simple-red btn-sm editable-cancel']")).click();
+		Driver.driver.findElement(By.xpath("//button[@id='cnfrmdlt_dups']")).click();
+		Thread.sleep(4000);
+	}
+	
 }
